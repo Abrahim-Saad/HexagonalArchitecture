@@ -1,10 +1,10 @@
 export default class Item {
     private id: string;
     private name: string;
-    private quantity: Number;
-    private price: Number;
+    private quantity: number;
+    private price: number;
 
-    constructor(id: string, name: string, quantity: Number, price: Number) {
+    constructor(id: string, name: string, quantity: number, price: number) {
         this.id = id;
         this.name = name;
         this.quantity = quantity;
@@ -20,8 +20,12 @@ export default class Item {
         return this.name;
     }
 
-    public getQuantity(): Number {
+    public getQuantity(): number {
         return this.quantity;
+    }
+
+    public getPrice(): number {
+        return this.price;
     }
 
 
@@ -30,11 +34,11 @@ export default class Item {
         this.name = name;
     }
 
-    public setQuantity(quantity: Number): void {
+    public setQuantity(quantity: number): void {
         this.quantity = quantity;
     }
 
-    public setPrice(price: Number): void {
+    public setPrice(price: number): void {
         this.price = price;
     }
 

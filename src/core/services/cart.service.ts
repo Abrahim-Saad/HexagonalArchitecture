@@ -17,7 +17,7 @@ export default class CartService {
     }
 
 
-    async addToCart(userId: string, itemIdToAdd: string, quantityToAdd: Number): Promise<Cart> {
+    async addToCart(userId: string, itemIdToAdd: string, quantityToAdd: number): Promise<Cart> {
 
         const user: User | null = await this.userPort.get(userId);
         if (!user) throw new Error('User not found.');
@@ -33,7 +33,7 @@ export default class CartService {
     }
 
 
-    async removeFromCart(userId: string, itemIdToRemove: string, quantityToRemove: Number): Promise<Cart> {
+    async removeFromCart(userId: string, itemIdToRemove: string, quantityToRemove: number): Promise<Cart> {
         const user: User | null = await this.userPort.get(userId);
         if (!user) {
             throw new Error('User not found.');
